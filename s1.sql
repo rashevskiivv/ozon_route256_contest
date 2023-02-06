@@ -1,0 +1,1 @@
+select * from problems where id in (select distinct * from (select distinct * from (select distinct on (problem_id, user_id) problem_id from submissions where success is true group by problem_id, user_id) as problem_id group by problem_id having count(*)>1) as "pi*") order by id;

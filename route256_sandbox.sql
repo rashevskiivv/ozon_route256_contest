@@ -1,0 +1,1 @@
+SELECT DISTINCT users.id, users.name FROM users, orders WHERE orders.user_id = users.id ORDER BY users.name;
